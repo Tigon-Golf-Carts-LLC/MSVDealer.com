@@ -1,0 +1,331 @@
+/* Dark Theme CSS for MSVDealer.com */
+
+/* Base Styles */
+:root {
+    --primary-color: #0096d6;
+    --primary-dark: #0078a8;
+    --primary-light: #00b0ff;
+    --dark-bg: #121212;
+    --dark-surface: #1E1E1E;
+    --dark-card: #252525;
+    --text-primary: #E0E0E0;
+    --text-secondary: #AAAAAA;
+    --text-muted: #757575;
+    --border-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--dark-bg);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-light);
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Header */
+header {
+    background-color: var(--dark-surface);
+    color: var(--text-primary);
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--dark-surface);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(0, 150, 214, 0.1);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: var(--dark-surface);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+}
+
+/* Dealer Grid */
+.dealer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.dealer-card {
+    background-color: var(--dark-card);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dealer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px var(--shadow-color);
+}
+
+.dealer-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.dealer-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    text-decoration: none;
+    color: white;
+}
+
+/* Dealer Page Specific */
+.dealer-header {
+    background-color: var(--dark-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.dealer-header h1 {
+    color: var(--primary-color);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.dealer-content {
+    background-color: var(--dark-card);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.dealer-content h2 {
+    color: var(--primary-light);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dealer-content h2:first-child {
+    margin-top: 0;
+}
+
+.dealer-content ul {
+    margin-bottom: 2rem;
+}
+
+.dealer-content li {
+    margin-bottom: 0.5rem;
+}
+
+.back-link {
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-surface);
+    color: var(--text-muted);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    
+    nav.active ul {
+        display: flex;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+    
+    .dealer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #hero {
+        padding: 2rem 0;
+    }
+    
+    #hero h2 {
+        font-size: 2rem;
+    }
+}
