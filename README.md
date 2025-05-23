@@ -1,6 +1,6 @@
-# LSVDealer.com - Low Speed Vehicle Dealer Website
+# MSVDealer.com - Medium Speed Vehicle Dealer Website
 
-A static website for listing low speed vehicle dealers across the United States. This project is designed to be hosted on GitHub Pages.
+A static website for listing Medium Speed Vehicle dealers across the United States. This project is designed to be hosted on GitHub Pages.
 
 ## Project Structure
 
@@ -15,7 +15,7 @@ A static website for listing low speed vehicle dealers across the United States.
 - Responsive layout for mobile and desktop
 - 30 dealer pages with detailed information
 - Dealer grid on homepage with links to individual pages
-- Information about low speed vehicles and their benefits
+- Information about Medium Speed Vehicles and their benefits
 
 ## Setup
 
@@ -33,4 +33,4 @@ To modify dealer information or add new dealers:
 
 ## License
 
-© 2025 LSVDealer.com - All Rights Reserved
+© 2025 MSVDealer.com - All Rights Reserved
