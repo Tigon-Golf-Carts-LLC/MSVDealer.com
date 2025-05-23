@@ -16,7 +16,7 @@ for dealer_file in dealer_files:
         content = f.read()
     
     # Extract dealer name
-    name_match = re.search(r'<h1>(.*?)</h1>\s*<p class="subtitle">Low Speed Vehicle Dealer</p>', content)
+    name_match = re.search(r'<h1>(.*?)</h1>\s*<p class="subtitle">Medium Speed Vehicles Dealer</p>', content)
     dealer_name = name_match.group(1) if name_match else "Unknown Dealer"
     
     # Extract phone number
@@ -96,7 +96,7 @@ for dealer_file in dealer_files:
     # Create visit location section if we have an address
     visit_location_html = ""
     if address and "Service Area" not in address:
-        visit_location_html = f'<h2>Visit Our Location</h2><p>Come visit our showroom at {address} to see our selection of low speed vehicles and speak with our knowledgeable staff.</p>'
+        visit_location_html = f'<h2>Visit Our Location</h2><p>Come visit our showroom at {address} to see our selection of Medium Speed Vehicless and speak with our knowledgeable staff.</p>'
     
     # Replace placeholders in template
     new_content = template.replace('DEALER_NAME', dealer_name)
