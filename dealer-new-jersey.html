@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Jersey - Medium Speed Vehicle Dealer | MSVDealer.com</title>
+    <meta name="description" content="New Jersey offers specialized sales and service for Medium Speed Vehicles (MSVs) and electric golf carts. Find your perfect MSV today!">
+    <meta name="keywords" content="MSV, Medium Speed Vehicle, New Jersey, electric vehicle dealer">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MSVDealer.com</h1>
+            <p>Your Source for Medium Speed Vehicle Dealers Nationwide</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <button class="hamburger">☰</button>
+            <ul>
+                <li><a href="MSVDealer.html">Home</a></li>
+                <li><a href="about.html">About MSVs</a></li>
+                <li><a href="find-dealers.html">Find Dealers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section class="dealer-header">
+            <h1>New Jersey</h1>
+            <p class="subtitle">Medium Speed Vehicle Dealer</p>
+            <a href="https://www.google.com/maps?cid=15178469885958324473" target="_blank" class="map-link">View on Google Maps</a>
+        </section>
+        
+        <section class="dealer-content">
+            <h2>Why Choose New Jersey for Your Medium Speed Vehicle?</h2>
+            <p>
+                New Jersey offers specialized sales and service for neighborhood electric vehicles (MSVs) and electric golf carts.
+                Customers benefit from knowledgeable staff, convenient location, and a selection of street-legal vehicles for every lifestyle.
+                Whether you need a new MSV for your neighborhood, business, or recreation, New Jersey delivers value and peace of mind.
+            </p>
+            
+            <h2>Dealer Info & Contact</h2>
+            <ul>
+                <li><strong>Phone:</strong> <a href="tel:18448446638">1-844-844-6638</a></li>
+                <li><strong>Address:</strong> Service Area: New Jersey</li>
+                <li><strong>Website:</strong> <a href='https://tigongolfcarts.com/new-jersey/' target='_blank'>Visit Dealer Site</a></li>
+                
+                <li><strong>YouTube:</strong> <a href='https://www.youtube.com/@TIGONGolfCartsNewJersey' target='_blank'>YouTube</a></li>
+                
+            </ul>
+            
+            <div class="map-container">
+                <h2>Location</h2>
+                
+                <div class="google-maps" id="div-that-holds-the-iframe"></div>
+<style>
+      .google-maps {
+            position: relative;
+            padding-bottom: 25%; // This is the aspect ratio
+            height: 0;
+            overflow: hidden;
+      }
+      .google-maps iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+      }
+</style>
+
+<script>
+//doesn't block the load event
+function createGMapsIframe(){
+  var i = document.createElement("iframe");
+  i.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.9025009626635!2d2!3d3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd2a4c1f13a8280f9!2z0J_QmNCm0JjQmtCQ0KLQng!5e0!3m2!1sbg!2sus!4v1448115192914";
+  i.scrolling = "auto";
+  i.frameborder = "0";
+  i.width = "600px";
+  i.height = "450px";
+  i.setAttribute("allowFullScreen", "");
+  i.setAttribute("style", "border:0");
+  document.getElementById("div-that-holds-the-iframe").appendChild(i);
+};
+	
+// Check for browser support of event handling capability
+if (window.addEventListener)
+	window.addEventListener("load", createGMapsIframe, false);
+else if (window.attachEvent)
+	window.attachEvent("onload", createGMapsIframe);
+else 
+	window.onload = createGMapsIframe;
+</script>
+                
+            </div>
+            
+            <h2>Medium Speed Vehicle Options</h2>
+            <p>
+                At New Jersey, we offer a variety of neighborhood electric vehicles to meet your specific needs:
+            </p>
+            <ul>
+                <li><strong>Street Legal Golf Carts:</strong> Perfect for neighborhood transportation</li>
+                <li><strong>Electric Utility Vehicles:</strong> Ideal for work sites and property maintenance</li>
+                <li><strong>Personal Transportation Vehicles:</strong> Comfortable, efficient community travel</li>
+                <li><strong>Custom MSVs:</strong> Tailored to your specific requirements</li>
+            </ul>
+            
+            <h2>Benefits of Medium Speed Vehicles</h2>
+            <p>
+                Neighborhood electric vehicles offer numerous advantages over traditional transportation options:
+            </p>
+            <ul>
+                <li>Eco-friendly electric operation</li>
+                <li>Lower operating costs than conventional vehicles</li>
+                <li>Street-legal on roads with speed limits up to 35 mph</li>
+                <li>Easy parking and maneuverability</li>
+                <li>Reduced carbon footprint</li>
+                <li>Community-friendly transportation</li>
+            </ul>
+            
+            
+            <h2>Leave a Review</h2><p>Had a great experience? <a href='https://g.page/r/CfmAgjrxwaTSEBM/review' target='_blank'>Leave us a review</a> to let others know!</p>
+        </section>
+        
+        <section class="back-link">
+            <a href="find-dealers.html">&larr; Back to All Dealers</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MSVDealer.com - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('nav');
+            
+            hamburger.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
