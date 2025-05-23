@@ -373,9 +373,9 @@ dealers = [
 # Dealer H2s/content generator
 def dealer_content(dealer):
     content = f'''
-    <h2>Why Choose {dealer["name"]} for Your Low Speed Vehicle?</h2>
+    <h2>Why Choose {dealer["name"]} for Your Medium Speed Vehicles?</h2>
     <p>
-        {dealer["name"]} offers specialized sales and service for low speed vehicles (LSVs) and electric golf carts.
+        {dealer["name"]} offers specialized sales and service for Medium Speed Vehicless (LSVs) and electric golf carts.
         Customers benefit from knowledgeable staff, convenient location, and a selection of street-legal vehicles for every lifestyle.
         Whether you need a new LSV for your neighborhood, business, or recreation, {dealer["name"]} delivers value and peace of mind.
     </p>
@@ -388,9 +388,9 @@ def dealer_content(dealer):
         {"<li><strong>YouTube:</strong> <a href='%s' target='_blank'>YouTube</a></li>" % dealer["youtube"] if dealer["youtube"] else ""}
         {"<li><strong>Pinterest:</strong> <a href='%s' target='_blank'>Pinterest</a></li>" % dealer["pinterest"] if dealer["pinterest"] else ""}
     </ul>
-    <h2>Low Speed Vehicle Options</h2>
+    <h2>Medium Speed Vehicles Options</h2>
     <p>
-        At {dealer["name"]}, we offer a variety of low speed vehicles to meet your specific needs:
+        At {dealer["name"]}, we offer a variety of Medium Speed Vehicless to meet your specific needs:
     </p>
     <ul>
         <li><strong>Street Legal Golf Carts:</strong> Perfect for neighborhood transportation</li>
@@ -398,9 +398,9 @@ def dealer_content(dealer):
         <li><strong>Personal Transportation Vehicles:</strong> Comfortable, efficient community travel</li>
         <li><strong>Custom LSVs:</strong> Tailored to your specific requirements</li>
     </ul>
-    <h2>Benefits of Low Speed Vehicles</h2>
+    <h2>Benefits of Medium Speed Vehicless</h2>
     <p>
-        Low speed vehicles offer numerous advantages over traditional transportation options:
+        Medium Speed Vehicless offer numerous advantages over traditional transportation options:
     </p>
     <ul>
         <li>Eco-friendly electric operation</li>
@@ -410,7 +410,7 @@ def dealer_content(dealer):
         <li>Reduced carbon footprint</li>
         <li>Community-friendly transportation</li>
     </ul>
-    {"<h2>Visit Our Location</h2><p>Come visit our showroom at %s to see our selection of low speed vehicles and speak with our knowledgeable staff.</p>" % dealer["address"] if dealer["address"] else ""}
+    {"<h2>Visit Our Location</h2><p>Come visit our showroom at %s to see our selection of Medium Speed Vehicless and speak with our knowledgeable staff.</p>" % dealer["address"] if dealer["address"] else ""}
     {"<h2>Leave a Review</h2><p>Had a great experience? <a href='%s' target='_blank'>Leave us a review</a> to let others know!</p>" % dealer["review"] if dealer["review"] else ""}
     '''
     return content
@@ -424,14 +424,14 @@ def generate_html_files():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>LSV Dealer - Low Speed Vehicle Dealers</title>
+        <title>LSV Dealer - Medium Speed Vehicles Dealers</title>
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header>
             <div class="container">
                 <h1>LSVDealer.com</h1>
-                <p>Your Source for Low Speed Vehicle Dealers Nationwide</p>
+                <p>Your Source for Medium Speed Vehicles Dealers Nationwide</p>
             </div>
         </header>
         
@@ -448,19 +448,19 @@ def generate_html_files():
         
         <main class="container">
             <section id="hero">
-                <h2>Find Your Perfect Low Speed Vehicle</h2>
-                <p>Connect with authorized dealers specializing in street-legal golf carts and low speed vehicles.</p>
+                <h2>Find Your Perfect Medium Speed Vehicles</h2>
+                <p>Connect with authorized dealers specializing in street-legal golf carts and Medium Speed Vehicless.</p>
             </section>
             
             <section id="about">
-                <h2>About Low Speed Vehicles</h2>
-                <p>Low Speed Vehicles (LSVs) are electric vehicles that can travel at speeds of 20-25 mph. They are street legal on roads with posted speed limits of 35 mph or less in most states. LSVs offer an eco-friendly, cost-effective transportation alternative for neighborhoods, planned communities, campuses, and small towns.</p>
+                <h2>About Medium Speed Vehicless</h2>
+                <p>Medium Speed Vehicless (LSVs) are electric vehicles that can travel at speeds of 20-25 mph. They are street legal on roads with posted speed limits of 35 mph or less in most states. LSVs offer an eco-friendly, cost-effective transportation alternative for neighborhoods, planned communities, campuses, and small towns.</p>
                 <p>All street-legal LSVs include required safety features such as headlights, turn signals, mirrors, windshield, seat belts, and more. They provide convenient transportation with lower operating costs than traditional vehicles.</p>
             </section>
             
             <section id="dealers">
                 <h2>Our Dealer Network</h2>
-                <p>Find a low speed vehicle dealer near you:</p>
+                <p>Find a Medium Speed Vehicles dealer near you:</p>
                 
                 <div class="dealer-grid">
     '''
@@ -511,14 +511,14 @@ def generate_html_files():
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>{dealer["name"]} - Low Speed Vehicle Dealer | LSVDealer.com</title>
+            <title>{dealer["name"]} - Medium Speed Vehicles Dealer | LSVDealer.com</title>
             <link rel="stylesheet" href="css/styles.css">
         </head>
         <body>
             <header>
                 <div class="container">
                     <h1>LSVDealer.com</h1>
-                    <p>Your Source for Low Speed Vehicle Dealers Nationwide</p>
+                    <p>Your Source for Medium Speed Vehicles Dealers Nationwide</p>
                 </div>
             </header>
             
@@ -536,7 +536,7 @@ def generate_html_files():
             <main class="container">
                 <section class="dealer-header">
                     <h1>{dealer["name"]}</h1>
-                    <p class="subtitle">Low Speed Vehicle Dealer</p>
+                    <p class="subtitle">Medium Speed Vehicles Dealer</p>
                     {f'<a href="{dealer["cid"]}" target="_blank" class="map-link">View on Google Maps</a>' if dealer["cid"] else ""}
                 </section>
                 
