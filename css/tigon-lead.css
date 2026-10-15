@@ -1,0 +1,108 @@
+/* TIGON lead form, modal and Call Now buttons (MSVDealer.com). Uses the site's theme tokens from styles.css. */
+
+.tgn-form { font: inherit; }
+.tgn-form .tgn-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+.tgn-form .tgn-field { flex: 1 1 100%; display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
+.tgn-form .tgn-half { flex: 1 1 240px; }
+.tgn-form label { font-weight: 500; font-size: 0.95rem; color: var(--text-primary); }
+.tgn-form .tgn-req { color: var(--primary-light); }
+.tgn-form .tgn-hint { font-weight: 400; color: var(--text-secondary); font-size: 0.85rem; }
+.tgn-form input[type=text],
+.tgn-form input[type=email],
+.tgn-form input[type=tel],
+.tgn-form select,
+.tgn-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--dark-surface);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+}
+.tgn-form input[readonly] { opacity: 0.8; cursor: default; }
+.tgn-form input[type=file] { color: var(--text-secondary); font-size: 0.9rem; max-width: 100%; }
+.tgn-form textarea { min-height: 120px; resize: vertical; }
+.tgn-form input:focus,
+.tgn-form select:focus,
+.tgn-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 150, 214, 0.2);
+}
+.tgn-form .tgn-invalid { border-color: #ef5350 !important; }
+.tgn-form .tgn-err { color: #ef9a9a; font-size: 0.85rem; min-height: 0; }
+.tgn-form .tgn-err:empty { display: none; }
+.tgn-form .tgn-legend { flex: 1 1 100%; margin: 0.5rem 0 0; font-size: 1rem; color: var(--primary-light); font-weight: 600; }
+.tgn-form .tgn-submit {
+    margin-top: 1.25rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.85rem 1.75rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.tgn-form .tgn-submit:hover { background-color: var(--primary-dark); }
+.tgn-form .tgn-submit[disabled] { opacity: 0.6; cursor: wait; }
+.tgn-form .tigon-msg { margin: 1rem 0 0; font-weight: 600; }
+.tgn-form .tigon-msg:empty { display: none; }
+.tgn-form .tigon-msg.tgn-ok { color: #81c784; }
+.tgn-form .tigon-msg.tgn-bad { color: #ef9a9a; }
+
+/* Spam trap: moved off-screen, never display:none only. */
+.tgn-hp { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* Call Now / Get a Quote buttons */
+.tgn-cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0 0; }
+.tgn-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+    padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; font-size: 1rem;
+    border: 2px solid var(--primary-color); cursor: pointer; font-family: inherit; line-height: 1.2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.tgn-btn:hover { text-decoration: none; }
+.tgn-btn-call { background-color: var(--primary-color); color: #fff; }
+.tgn-btn-call:hover { background-color: var(--primary-dark); border-color: var(--primary-dark); color: #fff; }
+.tgn-btn-quote { background-color: transparent; color: var(--primary-light); }
+.tgn-btn-quote:hover { background-color: rgba(0, 150, 214, 0.15); color: var(--primary-light); }
+
+/* Floating buttons on every page */
+.tgn-float {
+    position: fixed; right: 16px; bottom: 16px; z-index: 900;
+    display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-end;
+}
+.tgn-float .tgn-btn { box-shadow: 0 4px 12px var(--shadow-color); }
+.tgn-float .tgn-btn-quote { background-color: var(--dark-card); }
+@media (max-width: 600px) {
+    .tgn-float { left: 0; right: 0; bottom: 0; flex-direction: row; gap: 0; background: var(--dark-surface); border-top: 1px solid var(--border-color); }
+    .tgn-float .tgn-btn { flex: 1 1 50%; border-radius: 0; box-shadow: none; padding: 0.9rem 0.5rem; }
+    body { padding-bottom: 56px; }
+}
+
+/* Modal */
+.tgn-modal { position: fixed; inset: 0; z-index: 1000; display: none; align-items: flex-start; justify-content: center; padding: 2rem 1rem; overflow-y: auto; background: rgba(0, 0, 0, 0.75); }
+.tgn-modal.tgn-open { display: flex; }
+.tgn-modal-box {
+    position: relative; width: 100%; max-width: 680px; margin: auto;
+    background: var(--dark-card); color: var(--text-primary);
+    border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem;
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+.tgn-modal-box h2 { margin-top: 0; font-size: 1.6rem; padding-right: 2rem; }
+.tgn-modal-box > p { color: var(--text-secondary); margin-bottom: 1rem; }
+.tgn-modal-close {
+    position: absolute; top: 0.75rem; right: 0.75rem; width: 2.25rem; height: 2.25rem;
+    border: none; border-radius: 4px; background: transparent; color: var(--text-primary);
+    font-size: 1.75rem; line-height: 1; cursor: pointer;
+}
+.tgn-modal-close:hover { background: rgba(255, 255, 255, 0.08); }
+body.tgn-lock { overflow: hidden; }
+@media (max-width: 600px) {
+    .tgn-modal { padding: 0; }
+    .tgn-modal-box { border-radius: 0; min-height: 100%; padding: 1.5rem 1rem; }
+}
